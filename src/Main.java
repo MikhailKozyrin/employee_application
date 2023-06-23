@@ -8,14 +8,14 @@ public class Main {
         }
     }
 
-    public static int calculateSalarySum() {
+    public static double calculateSalarySum() {
         double sum = 0;
         for (Employee employee : employees) {
             if (employee != null) {
                 sum = sum + employee.getSalary();
             }
         }
-        return (int) sum;
+        return sum;
     }
 
     public static Employee getMinSalary() {
@@ -83,6 +83,13 @@ public class Main {
         }
     }
 
+    public static double salaryIndexing() {
+        int procent = 10;
+        double multipier = procent / (100 * 1.0);
+
+
+        return multipier;
+    }
 
 
 
@@ -102,10 +109,11 @@ public class Main {
         printEmployees();
         System.out.println();
         System.out.println("Сумма затрат на зарплаты в месяц: " + calculateSalarySum());
-        System.out.println("Минимальная зарпата: " + getMinSalary());
-        System.out.println("Максимальная зарпата: " + getMaxSalary());
+        System.out.println("Минимальная зарпата. " + getMinSalary());
+        System.out.println("Максимальная зарпата. " + getMaxSalary());
         System.out.println("Средняя зарплата у сотрудников: " + averageSalary());
         System.out.println();
+        System.out.println("Список Ф.И.О сотрудников:");
         printFullName();
 
     }
